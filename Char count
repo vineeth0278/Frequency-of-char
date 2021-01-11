@@ -1,10 +1,12 @@
-test = str(input("Enter your word :"))
+def count(x):
+    freq = {}
+    for char in x.lower():
+        if char in freq:
+            freq[char]+=1
+        else:
+            freq[char]=1
+    print("\n"+ str(freq) +"\n")
 
-freq = {}
+s = input("Enter your string:")
+count(s)
 
-for char in test.lower():
-    if char in freq:
-        freq[char]+=1
-    else:
-        freq[char]=1
-print(str(freq)+ "\n")
