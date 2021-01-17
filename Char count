@@ -5,8 +5,8 @@ def count(x):
             freq[char]+=1
         else:
             freq[char]=1
-    print("\n"+ str(freq) +"\n")
-
-s = input("Enter your string:")
+    l=sorted(freq.items(),key=lambda y : y[1],reverse=True)
+    for i in l:
+        print(str(i[0])+ ":"+str(i[1]))
+s = str(input("Enter your string:"))
 count(s)
-
